@@ -1,1 +1,0 @@
-pathuser = /home/%s/project/project-1A02-12094/contacts
