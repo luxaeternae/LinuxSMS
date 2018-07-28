@@ -12,13 +12,13 @@ print "This application is only compatible with gmail email servers. Please make
 print "Please have the gmail that you use for this be your default (inbox/0) inbox, or else inbox will not work and will redirect you to the wrong email."
 
 f = open("setupvars.txt", "w")
-f.write("pathuser = /home/%s/project/project-1A02-12094/contacts\n" % (var1))
+f.write("pathuser = '/home/%s/project/project-1A02-12094/contacts'\n" % (var1))
 f.close()
 
 f = open("setupvars.txt", "a")
-f.write("emaill = %s\n" % (var2))
+f.write("emaill = '%s'\n" % (var2))
 f.close()
 
 f = open("setupvars.txt", "a")
-f.write("password = %s\n" % (var3))
+f.write("password = '%s'\n" % (var3))
 f.close()

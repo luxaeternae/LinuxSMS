@@ -1,8 +1,9 @@
 import smtplib
+from vars import emaill, password, pathuser
 
 server = smtplib.SMTP( "smtp.gmail.com", 587 )
 server.starttls()
-server.login( '', '' )
+server.login('%s'  % emaill, password)
 
 ##Define Service Providers
 
@@ -17,12 +18,12 @@ def company(raw_input):
       return 'tmomail.net'
     else:
       return "Provider invalid or unsupported. Contact app developer for assistance."
-  
+
 #Create a file to store Contacts
 print "Welcome to LinuxChat v 1.1"
 
 while True:
-  
+
   print ""
   print "Send a Text"
   print "Read my inbox"
@@ -37,26 +38,25 @@ while True:
     text = raw_input("Message:")
     server.sendmail ( '%s@%s' % (number, company(provide)), '%s@%s' % (number, company(provide)), '%s' % (text))
     print "Your message was sent!"
-    
+
   elif choice == "read my inbox":
     import webbrowser
     webbrowser.open("https://mail.google.com/mail/u/0/#inbox")
-                    
+
   elif choice == "add a contact":
     print "Okay"
- 
+
   elif choice == "list my contacts":
     #list directory or open directory
     #!/usr/bin/python
     import os, sys
 
 # Open a file
-    path = "/home/laveys/project/project-1A02-12094/contacts"
-    dirs = os.listdir( path )
+    dirs = os.listdir( pathuser )
 
 # This would print all the files and directories
     for file in dirs:
       #removes.txt to only display names
       print file[:-4]
 
-    
+
