@@ -1,3 +1,4 @@
+
 Build an App overnight
 
 Project goals:
@@ -16,4 +17,4 @@ Make sure the email address is your default in your browser, or "show my inbox" 
 
 Written in Python 2.7, July 27, 2018.
 
-Authors: Sam LaVey and Jonathan Yang
+Authors: Sam LaVey and Jonathan Yang (finally)
