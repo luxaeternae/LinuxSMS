@@ -2,7 +2,7 @@ import smtplib
 
 server = smtplib.SMTP( "smtp.gmail.com", 587 )
 server.starttls()
-server.login( '{username}', '{your password}' )
+server.login( 'happy0193472@gmail.com', '21122112Aa!' )
 
 ##Define Service Providers
 
@@ -19,30 +19,43 @@ def company(raw_input):
       return "Provider invalid or unsupported. Contact app developer for assistance."
   
 #Create a file to store Contacts
-
 print "Welcome to LinuxChat v 1.1"
 
-print "Send a Text"
-print "Read my inbox"
-print "Add a contact"
-print "list my contacts"
-choice = raw_input("Select one of the above by typing it here:").lower()
+while True:
+  
+  print ""
+  print "Send a Text"
+  print "Read my inbox"
+  print "Add a contact"
+  print "list my contacts"
+  choice = raw_input("Select one of the above by typing it here:").lower()
 
 
-if choice == "send a text":
+  if choice == "send a text":
     number = raw_input("Phone Number/Contact:")
     provide = raw_input("Provider:").lower()
     text = raw_input("Message:")
     server.sendmail ( '%s@%s' % (number, company(provide)), '%s@%s' % (number, company(provide)), '%s' % (text))
     print "Your message was sent!"
     
-elif choice == "read my inbox":
+  elif choice == "read my inbox":
     import webbrowser
     webbrowser.open("https://mail.google.com/mail/u/0/#inbox")
                     
-elif choice == "add a contact":
+  elif choice == "add a contact":
     print "Okay"
  
-elif choice == "list my contacts":
-    f = open('contacts.txt')
-    lines = f.readlines()
+  elif choice == "list my contacts":
+    #list directory or open directory
+    #!/usr/bin/python
+    import os, sys
+
+# Open a file
+    path = "/home/laveys/project/project-1A02-12094/contacts"
+    dirs = os.listdir( path )
+
+# This would print all the files and directories
+    for file in dirs:
+      print file[:-4]
+
+    
