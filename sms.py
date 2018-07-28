@@ -29,7 +29,8 @@ while True:
   print "Read my inbox"
   print "Add a contact"
   print "list my contacts"
-  choice = raw_input("Select one of the above by typing it here:").lower()
+  print "" 
+choice = raw_input("Select one of the above by typing it here:").lower()
 
 
   if choice == "send a text":
