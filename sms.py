@@ -2,7 +2,7 @@ import smtplib
 
 server = smtplib.SMTP( "smtp.gmail.com", 587 )
 server.starttls()
-server.login( 'happy0193472@gmail.com', '21122112Aa!' )
+server.login( '', '' )
 
 ##Define Service Providers
 
@@ -56,6 +56,7 @@ while True:
 
 # This would print all the files and directories
     for file in dirs:
+      #removes.txt to only display names
       print file[:-4]
 
     
