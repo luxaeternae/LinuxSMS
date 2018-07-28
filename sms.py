@@ -24,15 +24,14 @@ print "Welcome to LinuxChat v 1.1"
 
 while True:
 
-  print ""
-  print "Send a Text"
-  print "Read my inbox"
-  print "Add a contact"
-  print "list my contacts"
+  print " ________________"
+  print "|   Send a Text  |"
+  print "|  Read my inbox |"
+  print "|  Add a contact |"
+  print "|list my contacts|"
+  print "|________________|"
   print "" 
-choice = raw_input("Select one of the above by typing it here:").lower()
-
-
+  choice = raw_input("Select one of the above by typing it here:").lower()
   if choice == "send a text":
     number = raw_input("Phone Number/Contact:")
     provide = raw_input("Provider:").lower()
