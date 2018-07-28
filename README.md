@@ -18,3 +18,5 @@ Make sure the email address is your default in your browser, or "show my inbox" 
 Written in Python 2.7, July 27, 2018.
 
 Authors: Sam LaVey and Jonathan Yang (finally)
+
+WIP - not all functionality is active and ready
